@@ -1,10 +1,13 @@
-import type { Options } from 'tsup'
+import { defineConfig } from 'tsup'
 
-export default <Options>{
+export default defineConfig({
   entryPoints: ['lib/index.ts'],
   clean: true,
-  format: ['cjs'],
+  format: ['esm', 'cjs'],
   dts: true,
   sourcemap: true,
+  splitting: true,
   minify: false,
-}
+  skipNodeModulesBundle: true,
+  external: ['node_modules'],
+})

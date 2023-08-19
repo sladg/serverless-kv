@@ -8,7 +8,22 @@
   },
   "license": "MIT",
   "author": "Jan Soukup <jan@ssoukup.com>",
-  "exports": "./dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": {
+        "node": "./dist/index.js",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "node": "./dist/index.cjs",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -16,16 +31,20 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsup",
-    "dev": "node --loader tsx ./src/index.ts | pino-pretty",
     "commit": "npx --package @sladg/release-utils utils commit",
+    "dev": "tsup --watch --clean=false",
     "lint:check": "eslint --ext .ts . && tsc --noEmit",
     "lint:fix": "eslint --ext .ts . --fix",
     "release": "npx --package @sladg/release-utils utils shipit --gitUser @sladg --gitEmail jan@ssoukup.com --changelog"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.395.0"
   },
   "devDependencies": {
     "@sladg/eslint-config-base": "^1.3.0",
     "@types/node": "^18.7.16",
     "eslint": "^8.47.0",
+    "sst": "^2.24.8",
     "tsup": "^6.5.0",
     "tsx": "^3.12.7",
     "typescript": "^4.8.2"
@@ -33,8 +52,5 @@
   "engines": {
     "node": ">=18"
   },
-  "engineStrict": true,
-  "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.395.0"
-  }
+  "engineStrict": true
 }
