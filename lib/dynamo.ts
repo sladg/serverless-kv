@@ -39,7 +39,7 @@ export const get = async <T extends BaseDataType>(
   tableName: string,
   id: string,
   model: string = defaultModelName,
-): Promise<T> => {
+): Promise<T | null> => {
   console.log({ tableName, id, model })
 
   const params: GetItemCommandInput = {
@@ -51,7 +51,9 @@ export const get = async <T extends BaseDataType>(
   }
 
   const result = await client.send(new GetItemCommand(params))
-  return parseFromJson<T>(result.Item?.data.S!)
+
+  const data = result.Item?.data.S
+  return !data ? null : parseFromJson<T>(data)
 }
 
 export const scanAll = async <T extends BaseDataType>(
