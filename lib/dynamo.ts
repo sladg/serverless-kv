@@ -76,9 +76,10 @@ export const insert = async <T extends BaseDataType>(
   data: T,
   model: string = defaultModelName,
 ): Promise<T> => {
+  // When putting new item, it does not return the item itself. Allowed are only ALL_OLD or NONE
+  // See: https://stackoverflow.com/a/39728141/14564826
   const params: PutItemCommandInput = {
     TableName: tableName,
-    ReturnValues: 'ALL_NEW',
     Item: {
       [pkField]: { S: data.id },
       [skField]: { S: model },
@@ -86,8 +87,13 @@ export const insert = async <T extends BaseDataType>(
     },
   }
 
-  const result = await client.send(new PutItemCommand(params))
-  return parseFromJson<T>(result.Attributes?.data.S!)
+  await client.send(new PutItemCommand(params))
+  const result = await get<T>(tableName, data.id, model)
+  if (!result) {
+    throw new Error('Item inserted, but not found')
+  }
+
+  return result
 }
 
 export const update = async <T extends BaseDataType>(
