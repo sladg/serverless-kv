@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [v0.5.2](https://github.com/sladg/serverless-kv/compare/v0.5.1...v0.5.2)
+
+* 🐛 fix(inserts): return values after inserting to dynamo [[8730a6aa39b6921cb336b5f1a5755d053075d071](https://github.com/sladg/serverless-kv/commit/8730a6aa39b6921cb336b5f1a5755d053075d071))]
+
+
 ## [v0.5.1](https://github.com/sladg/serverless-kv/compare/v0.5.0...v0.5.1)
 
 * 🐛 fix(getter): allow for null values to be returned on get [[9ca07282fb16a32966a875056b88eecc99529da8](https://github.com/sladg/serverless-kv/commit/9ca07282fb16a32966a875056b88eecc99529da8))]
@@ -34,6 +39,7 @@
 
 ## [v0.0.1](https://github.com/sladg/serverless-kv/compare/v0.0.1)
 
+* 🐛 fix(inserts): return values after inserting to dynamo [[8730a6aa39b6921cb336b5f1a5755d053075d071](https://github.com/sladg/serverless-kv/commit/8730a6aa39b6921cb336b5f1a5755d053075d071))]
 * 🐛 fix(getter): allow for null values to be returned on get [[9ca07282fb16a32966a875056b88eecc99529da8](https://github.com/sladg/serverless-kv/commit/9ca07282fb16a32966a875056b88eecc99529da8))]
 * ♻️ refactor(exports): improved namind and export types [[bafb35a73c33f1c4dae3b0ea3c157b8e1c510acb](https://github.com/sladg/serverless-kv/commit/bafb35a73c33f1c4dae3b0ea3c157b8e1c510acb))]
 * 🐛 fix(exports): fixed misstyped exports and types declaration [[997b48cbc2ed1e5390a2a37f640cc79c8bee008c](https://github.com/sladg/serverless-kv/commit/997b48cbc2ed1e5390a2a37f640cc79c8bee008c))]
