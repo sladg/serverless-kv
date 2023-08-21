@@ -9,7 +9,7 @@ export const parseFromJson = <T extends BaseDataType>(data: string): T => {
   }
 }
 
-export const stringifyToJson = (data: object): string => {
+export const stringifyFromObject = (data: object): string => {
   try {
     return JSON.stringify(data)
   } catch (e) {

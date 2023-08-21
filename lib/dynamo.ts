@@ -14,9 +14,9 @@ import {
   UpdateItemCommandInput,
 } from '@aws-sdk/client-dynamodb'
 
-import { dataField, pkField, skField } from './config'
+import { dataField, defaultModelName, pkField, skField } from './config'
 import { BaseDataType } from './types'
-import { parseFromJson, stringifyToJson } from './utils'
+import { parseFromJson, stringifyFromObject } from './utils'
 
 const client = new DynamoDBClient({
   //
@@ -38,8 +38,10 @@ export const check = async (tableName: string) => {
 export const get = async <T extends BaseDataType>(
   tableName: string,
   id: string,
-  model?: string,
+  model: string = defaultModelName,
 ): Promise<T> => {
+  console.log({ tableName, id, model })
+
   const params: GetItemCommandInput = {
     TableName: tableName,
     Key: {
@@ -54,8 +56,10 @@ export const get = async <T extends BaseDataType>(
 
 export const scanAll = async <T extends BaseDataType>(
   tableName: string,
-  model?: string,
+  model: string = defaultModelName,
 ): Promise<T[]> => {
+  console.log({ tableName, model })
+
   const params: ScanCommandInput = {
     TableName: tableName,
     ...(model && {
@@ -72,15 +76,15 @@ export const scanAll = async <T extends BaseDataType>(
 export const insert = async <T extends BaseDataType>(
   tableName: string,
   data: T,
-  model?: string,
+  model: string = defaultModelName,
 ): Promise<T> => {
   const params: PutItemCommandInput = {
     TableName: tableName,
-    ReturnValues: 'ALL_NEW',
+    ReturnValues: 'ALL_OLD',
     Item: {
       [pkField]: { S: data.id },
-      ...(model && { [skField]: { S: model } }),
-      [dataField]: { S: stringifyToJson(data) },
+      [skField]: { S: model },
+      [dataField]: { S: stringifyFromObject(data) },
     },
   }
 
@@ -92,7 +96,7 @@ export const update = async <T extends BaseDataType>(
   tableName: string,
   id: string,
   data: T,
-  model?: string,
+  model: string = defaultModelName,
 ): Promise<T> => {
   const params: UpdateItemCommandInput = {
     TableName: tableName,
@@ -104,7 +108,7 @@ export const update = async <T extends BaseDataType>(
     UpdateExpression: 'set data = :d',
     ExpressionAttributeValues: {
       ':d': {
-        S: stringifyToJson({ ...data, id }),
+        S: stringifyFromObject({ ...data, id }),
       },
     },
   }

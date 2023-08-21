@@ -6,11 +6,13 @@ export const pkField = 'id'
 export const skField = 'model'
 export const dataField = 'data'
 
-export const sstTableConfig: SstPartialConfig = {
+export const defaultModelName = 'default'
+
+export const tableConfig: SstPartialConfig = {
   fields: {
-    [pkField]: 'string',
-    [skField]: 'string',
-    [dataField]: 'string',
+    [pkField]: 'string' as const,
+    [skField]: 'string' as const,
+    [dataField]: 'string' as const,
   },
   primaryIndex: {
     partitionKey: pkField,
