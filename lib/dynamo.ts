@@ -40,8 +40,6 @@ export const get = async <T extends BaseDataType>(
   id: string,
   model: string = defaultModelName,
 ): Promise<T | null> => {
-  console.log({ tableName, id, model })
-
   const params: GetItemCommandInput = {
     TableName: tableName,
     Key: {
@@ -60,8 +58,6 @@ export const scanAll = async <T extends BaseDataType>(
   tableName: string,
   model: string = defaultModelName,
 ): Promise<T[]> => {
-  console.log({ tableName, model })
-
   const params: ScanCommandInput = {
     TableName: tableName,
     ...(model && {
@@ -82,7 +78,7 @@ export const insert = async <T extends BaseDataType>(
 ): Promise<T> => {
   const params: PutItemCommandInput = {
     TableName: tableName,
-    ReturnValues: 'ALL_OLD',
+    ReturnValues: 'ALL_NEW',
     Item: {
       [pkField]: { S: data.id },
       [skField]: { S: model },
