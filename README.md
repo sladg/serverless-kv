@@ -25,9 +25,9 @@ userKv.delete("user-id")
 And you can also use standalone commands:
 
 ```ts
-import { kvCommands } from "@sladg/serverless-kv"
+import { kvCmd } from "@sladg/serverless-kv"
 
-kvCommands.get("table-name", "user-id", "user-model")
+kvCmd.get("table-name", "user-id", "user-model")
 ```
 
 ### SST

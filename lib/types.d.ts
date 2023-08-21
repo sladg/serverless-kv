@@ -6,11 +6,11 @@ export type DeleteDataType = {
   id: string
 }
 
-export type KvClient = {
+export type KvClient<T extends BaseDataType> = {
   check: () => Promise<boolean>
-  get: <T extends BaseDataType>(id: string) => Promise<T>
-  insert: <T extends BaseDataType>(data: T) => Promise<T>
-  update: <T extends BaseDataType>(id: string, data: T) => Promise<T>
+  get: (id: string) => Promise<T>
+  insert: (data: T) => Promise<T>
+  update: (id: string, data: T) => Promise<T>
   delete: (id: string) => Promise<DeleteDataType>
-  scanAll: <T extends BaseDataType>() => Promise<T[]>
+  scanAll: () => Promise<T[]>
 }
