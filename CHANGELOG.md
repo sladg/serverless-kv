@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [v0.6.0](https://github.com/sladg/serverless-kv/compare/v0.5.3...v0.6.0)
+
+* build(deps-dev): bump undici from 5.23.0 to 5.26.3 [[dd6bc3451775f5b5f36278d4e36cc358e98a54eb](https://github.com/sladg/serverless-kv/commit/dd6bc3451775f5b5f36278d4e36cc358e98a54eb))]
+
+
 ## [v0.5.3](https://github.com/sladg/serverless-kv/compare/v0.5.2...v0.5.3)
 
 * 🐛 fix(insert): improve reliability of inserting items [[360f1cccb67292a396de8053479287b552797f18](https://github.com/sladg/serverless-kv/commit/360f1cccb67292a396de8053479287b552797f18))]
@@ -44,6 +49,7 @@
 
 ## [v0.0.1](https://github.com/sladg/serverless-kv/compare/v0.0.1)
 
+* build(deps-dev): bump undici from 5.23.0 to 5.26.3 [[dd6bc3451775f5b5f36278d4e36cc358e98a54eb](https://github.com/sladg/serverless-kv/commit/dd6bc3451775f5b5f36278d4e36cc358e98a54eb))]
 * 🐛 fix(insert): improve reliability of inserting items [[360f1cccb67292a396de8053479287b552797f18](https://github.com/sladg/serverless-kv/commit/360f1cccb67292a396de8053479287b552797f18))]
 * 🐛 fix(inserts): return values after inserting to dynamo [[8730a6aa39b6921cb336b5f1a5755d053075d071](https://github.com/sladg/serverless-kv/commit/8730a6aa39b6921cb336b5f1a5755d053075d071))]
 * 🐛 fix(getter): allow for null values to be returned on get [[9ca07282fb16a32966a875056b88eecc99529da8](https://github.com/sladg/serverless-kv/commit/9ca07282fb16a32966a875056b88eecc99529da8))]
