@@ -109,7 +109,7 @@ export const update = async <T extends BaseDataType>(
       ...(model && { [skField]: { S: model } }),
     },
     ReturnValues: 'ALL_NEW',
-    UpdateExpression: 'set data = :d',
+    UpdateExpression: `set ${dataField} = :d`,
     ExpressionAttributeValues: {
       ':d': {
         S: stringifyFromObject({ ...data, id }),

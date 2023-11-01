@@ -4,7 +4,7 @@ type SstPartialConfig = Pick<TableProps, 'fields' | 'primaryIndex'>
 
 export const pkField = 'id'
 export const skField = 'model'
-export const dataField = 'data'
+export const dataField = 'val'
 
 export const defaultModelName = 'default'
 
