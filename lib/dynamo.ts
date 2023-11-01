@@ -50,7 +50,7 @@ export const get = async <T extends BaseDataType>(
 
   const result = await client.send(new GetItemCommand(params))
 
-  const data = result.Item?.data.S
+  const data = result.Item?.[dataField].S
   return !data ? null : parseFromJson<T>(data)
 }
 
@@ -68,7 +68,7 @@ export const scanAll = async <T extends BaseDataType>(
   }
 
   const result = await client.send(new ScanCommand(params))
-  return result.Items!.map((item) => parseFromJson(item.data.S!))
+  return result.Items!.map((item) => parseFromJson(item[dataField].S!))
 }
 
 export const insert = async <T extends BaseDataType>(
@@ -118,7 +118,7 @@ export const update = async <T extends BaseDataType>(
   }
 
   const result = await client.send(new UpdateItemCommand(params))
-  return parseFromJson<T>(result.Attributes?.data.S!)
+  return parseFromJson<T>(result.Attributes?.[dataField].S!)
 }
 
 export const remove = async (tableName: string, id: string) => {
