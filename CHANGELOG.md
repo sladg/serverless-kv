@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [v1.0.1](https://github.com/sladg/serverless-kv/compare/v1.0.0...v1.0.1)
+
+* 🐛 fix(mapping): fixed properties access to reflect data field name [[ce43547b04e3557479eeba2260c52aad87e5c4d3](https://github.com/sladg/serverless-kv/commit/ce43547b04e3557479eeba2260c52aad87e5c4d3))]
+
+
 ## [v1.0.0](https://github.com/sladg/serverless-kv/compare/v0.6.0...v1.0.0)
 
 * 🐛 fix(data field name changed): fixed problem with reserved keyword in data field [[29043f4262ed9d8e9b53d510fc067a08f8601e14](https://github.com/sladg/serverless-kv/commit/29043f4262ed9d8e9b53d510fc067a08f8601e14))]
@@ -54,6 +59,7 @@
 
 ## [v0.0.1](https://github.com/sladg/serverless-kv/compare/v0.0.1)
 
+* 🐛 fix(mapping): fixed properties access to reflect data field name [[ce43547b04e3557479eeba2260c52aad87e5c4d3](https://github.com/sladg/serverless-kv/commit/ce43547b04e3557479eeba2260c52aad87e5c4d3))]
 * 🐛 fix(data field name changed): fixed problem with reserved keyword in data field [[29043f4262ed9d8e9b53d510fc067a08f8601e14](https://github.com/sladg/serverless-kv/commit/29043f4262ed9d8e9b53d510fc067a08f8601e14))]
 * build(deps-dev): bump undici from 5.23.0 to 5.26.3 [[dd6bc3451775f5b5f36278d4e36cc358e98a54eb](https://github.com/sladg/serverless-kv/commit/dd6bc3451775f5b5f36278d4e36cc358e98a54eb))]
 * 🐛 fix(insert): improve reliability of inserting items [[360f1cccb67292a396de8053479287b552797f18](https://github.com/sladg/serverless-kv/commit/360f1cccb67292a396de8053479287b552797f18))]
