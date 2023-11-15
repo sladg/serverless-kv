@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [v1.3.0](https://github.com/sladg/serverless-kv/compare/v1.1.0...v1.3.0)
+
+* build(deps-dev): bump @babel/traverse from 7.22.10 to 7.23.3 [[306d76069ab3c7f34c320ffb3a93948d235ad462](https://github.com/sladg/serverless-kv/commit/306d76069ab3c7f34c320ffb3a93948d235ad462))]
+* build(deps-dev): bump the npm_and_yarn at /. security update group with 1 update [[7709cb7cb7d7ac3d47ba30d24f69adc6cb72208e](https://github.com/sladg/serverless-kv/commit/7709cb7cb7d7ac3d47ba30d24f69adc6cb72208e))]
+
+
 ## [v1.1.0](https://github.com/sladg/serverless-kv/compare/v1.0.1...v1.1.0)
 
 * build(deps): bump axios and aws-crt [[738b1002b26f0788724776da698a2f6167ce34f7](https://github.com/sladg/serverless-kv/commit/738b1002b26f0788724776da698a2f6167ce34f7))]
@@ -64,6 +70,8 @@
 
 ## [v0.0.1](https://github.com/sladg/serverless-kv/compare/v0.0.1)
 
+* build(deps-dev): bump @babel/traverse from 7.22.10 to 7.23.3 [[306d76069ab3c7f34c320ffb3a93948d235ad462](https://github.com/sladg/serverless-kv/commit/306d76069ab3c7f34c320ffb3a93948d235ad462))]
+* build(deps-dev): bump the npm_and_yarn at /. security update group with 1 update [[7709cb7cb7d7ac3d47ba30d24f69adc6cb72208e](https://github.com/sladg/serverless-kv/commit/7709cb7cb7d7ac3d47ba30d24f69adc6cb72208e))]
 * build(deps): bump axios and aws-crt [[738b1002b26f0788724776da698a2f6167ce34f7](https://github.com/sladg/serverless-kv/commit/738b1002b26f0788724776da698a2f6167ce34f7))]
 * 🐛 fix(mapping): fixed properties access to reflect data field name [[ce43547b04e3557479eeba2260c52aad87e5c4d3](https://github.com/sladg/serverless-kv/commit/ce43547b04e3557479eeba2260c52aad87e5c4d3))]
 * 🐛 fix(data field name changed): fixed problem with reserved keyword in data field [[29043f4262ed9d8e9b53d510fc067a08f8601e14](https://github.com/sladg/serverless-kv/commit/29043f4262ed9d8e9b53d510fc067a08f8601e14))]
