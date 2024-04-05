@@ -1,6 +1,6 @@
 {
   "name": "@sladg/serverless-kv",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Simple DynamoDB wrapper, most up-to-date, extremely easy to plug-in and use like Redis.",
   "repository": {
     "type": "git",
