@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [v1.6.0](https://github.com/sladg/serverless-kv/compare/v1.5.0...v1.6.0)
+
+* build(deps-dev): bump undici from 5.28.3 to 5.28.4 [[549d5896ca7957db20fe85ac22756ef54245db9d](https://github.com/sladg/serverless-kv/commit/549d5896ca7957db20fe85ac22756ef54245db9d))]
+
+
 ## [v1.5.0](https://github.com/sladg/serverless-kv/compare/v1.4.0...v1.5.0)
 
 * build(deps-dev): bump undici from 5.26.3 to 5.28.3 [[21c0f3880a5dcfde373faac6ec3cc982857a10bc](https://github.com/sladg/serverless-kv/commit/21c0f3880a5dcfde373faac6ec3cc982857a10bc))]
@@ -80,6 +85,7 @@
 
 ## [v0.0.1](https://github.com/sladg/serverless-kv/compare/v0.0.1)
 
+* build(deps-dev): bump undici from 5.28.3 to 5.28.4 [[549d5896ca7957db20fe85ac22756ef54245db9d](https://github.com/sladg/serverless-kv/commit/549d5896ca7957db20fe85ac22756ef54245db9d))]
 * build(deps-dev): bump undici from 5.26.3 to 5.28.3 [[21c0f3880a5dcfde373faac6ec3cc982857a10bc](https://github.com/sladg/serverless-kv/commit/21c0f3880a5dcfde373faac6ec3cc982857a10bc))]
 * build(deps): bump follow-redirects from 1.15.3 to 1.15.4 [[535f7e28319014a1113b235a17bca61d2db03e55](https://github.com/sladg/serverless-kv/commit/535f7e28319014a1113b235a17bca61d2db03e55))]
 * build(deps-dev): bump @babel/traverse from 7.22.10 to 7.23.3 [[306d76069ab3c7f34c320ffb3a93948d235ad462](https://github.com/sladg/serverless-kv/commit/306d76069ab3c7f34c320ffb3a93948d235ad462))]
